@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+}
+.box {
+  display: flex;
+  border: 1px solid #b24242;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.box-centre {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #b24242;
+  color: white;
+  width: 60px;
+}
+.box-left {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #b24242;
+  width: 60px;
+}
+.box-right {
+  color: #b24242;
+  background-color: #fbe8e8;
+  min-width: 60px;
+}
+.buttons {
+  display: flex;
+}
+.container {
+  position: absolute;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  border-radius: 8px;
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.count {
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.loader {
+  min-height: 21px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+button {
+  display: flex;
+  all: unset;
+  cursor: pointer;
+  border-radius: 8px;
+}
+input {
+  all: unset;
+  padding: 14px;
+  overflow: visible;
+}
+span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner:before {
+  content: ".";
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  margin-left: -5px;
+  border-radius: 50%;
+  border-top: 2px solid grey;
+  border-right: 2px solid transparent;
+  animation: spinner 0.6s linear infinite;
+}
+.loader span {
+  margin-left: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
